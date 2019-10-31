@@ -1,33 +1,41 @@
 import java.util.Arrays;
 
-class threesum {
-    int[] arr;
-    int count;
-    public threesum(int[] arr) {
-        this.count=0;
+class Threesum {
+    private int[] arr; // arrays given as input.
+    private int count; // Denotes the count of threesum values.
+    public static final int A = 30; // input 1
+    public static final int B = -40; // input 2
+    public static final int C = -20; // input 3
+    public static final int D = -10; // input 4
+    public static final int E = 40; // input 5
+    public static final int F = 0; // input 6
+    public static final int G = 10; // input 7
+    public static final int H = 5; // input 8
+
+    public Threesum (final int[] arr) {
+        this.count = 0;
         Arrays.sort(arr);
-        this.arr=arr;
+        this.arr = arr;
     }
-    
-    public int implement(){
-        for (int i=0;i<arr.length;i++){
-            
-            for (int j=i+1;j<arr.length;j++){
-                if ((Arrays.binarySearch(arr, -(arr[i]+arr[j]))>0) && (i!=j)){
-                    if (arr[i]<arr[j]){
-                        if (arr[j]<(-(arr[i]+arr[j]))){
-                            this.count=this.count+1;
+// This method takes array as input returns integer value.
+// The integer value denotes the number of threesum values present in the array 
+    public int implement() {
+        for (int i = 0 ; i < arr.length ; i++) {
+            for (int j = i + 1 ; j < arr.length ; j++) {
+                if ((Arrays.binarySearch(arr, -(arr[i] + arr[j])) > 0) && (i != j)) {
+                    if (arr[i] < arr[j]) {
+                        if (arr[j] < (-(arr[i] + arr[j]))) {
+                            this.count = this.count+1; 
                         }
                     }
-                   
                 }
             }
         }
         return this.count;
     }
-    public static void main(String[] args){
-        int[] intArray = new int[]{30,-40,-20,-10,40,0,10,5}; 
-        threesum a = new threesum(intArray);
+    public static void main(String[] args) {
+        int[] intArray = new int[]{A,B,C,D,E,F,G,H}; 
+        Threesum a = new Threesum(intArray);
         int c = a.implement();
         System.out.println(c);
     }
