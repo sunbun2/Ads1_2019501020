@@ -12,7 +12,6 @@ class Solution {
 		}
 	}
 	public static String Josephus(int m, int n) {
-		// fill you code Here
 		String s="";
 		Node head = new Node(0);
 		Node prev = head;
@@ -49,8 +48,8 @@ class Solution {
 		return s;
 	}
 
-	public static void main(String[] args){
-		Solution a = new Solution();
-		String p= Solution.Josephus(7, 2);
-	}
+	// public static void main(String[] args){
+	// 	Solution a = new Solution();
+	// 	String p= Solution.Josephus(7, 2);
+	// }
 }

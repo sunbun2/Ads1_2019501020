@@ -295,286 +295,286 @@ public class TestJUnit {
     Solution s = new Solution();
     Assert.assertArrayEquals( res, s.sortInsertion(arr));
   }
-  @Test
-  public void testCase41() {
-    int[] arr = {772, 707, 712, 614, 966, 999, 70};
-    int[] res = {70, 614, 707, 712, 772, 966, 999};
-    Solution s = new Solution();
-    Assert.assertArrayEquals( res, s.sortSelection(arr));
-  }
-  @Test
-  public void testCase42() {
-    int[] arr = {46, 82, 648, 786, 795, 516, 24, 364, 364, 752, 898, 809, 201, 615, 809, 884, 257, 22};
-    int[] res = {22, 24, 46, 82, 201, 257, 364, 364, 516, 615, 648, 752, 786, 795, 809, 809, 884, 898};
-    Solution s = new Solution();
-    Assert.assertArrayEquals( res, s.sortSelection(arr));
-  }
-  @Test
-  public void testCase43() {
-    int[] arr = {287, 399, 591, 67, 740, 853, 407, 76, 658, 295, 282, 639, 106, 712, 343, 702, 544, 409, 992, 405, 916, 542, 163, 950, 242};
-    int[] res = {67, 76, 106, 163, 242, 282, 287, 295, 343, 399, 405, 407, 409, 542, 544, 591, 639, 658, 702, 712, 740, 853, 916, 950, 992};
-    Solution s = new Solution();
-    Assert.assertArrayEquals( res, s.sortSelection(arr));
-  }
-  @Test
-  public void testCase44() {
-    int[] arr = {775, 927, 978, 665, 251, 536, 304, 201, 966, 944, 979, 766, 535, 70, 624, 652, 236, 822, 925, 734, 714, 770, 695, 323, 935, 865};
-    int[] res = {70, 201, 236, 251, 304, 323, 535, 536, 624, 652, 665, 695, 714, 734, 766, 770, 775, 822, 865, 925, 927, 935, 944, 966, 978, 979};
-    Solution s = new Solution();
-    Assert.assertArrayEquals( res, s.sortSelection(arr));
-  }
-  @Test
-  public void testCase45() {
-    int[] arr = {769, 919, 643, 629, 677, 665, 503, 452, 917, 983, 116, 400, 853, 803, 676, 323, 715, 524, 410};
-    int[] res = {116, 323, 400, 410, 452, 503, 524, 629, 643, 665, 676, 677, 715, 769, 803, 853, 917, 919, 983};
-    Solution s = new Solution();
-    Assert.assertArrayEquals( res, s.sortSelection(arr));
-  }
-  @Test
-  public void testCase46() {
-    int[] arr = {884, 513, 722, 172, 643, 16, 184, 405, 803, 699, 3, 545, 84, 159, 334};
-    int[] res = {3, 16, 84, 159, 172, 184, 334, 405, 513, 545, 643, 699, 722, 803, 884};
-    Solution s = new Solution();
-    Assert.assertArrayEquals( res, s.sortSelection(arr));
-  }
-  @Test
-  public void testCase47() {
-    int[] arr = {448, 11, 285, 732, 753, 47, 709, 193, 616, 879, 31, 847, 948, 106, 126, 489, 142, 23, 213, 121, 197, 84, 329, 596};
-    int[] res = {11, 23, 31, 47, 84, 106, 121, 126, 142, 193, 197, 213, 285, 329, 448, 489, 596, 616, 709, 732, 753, 847, 879, 948};
-    Solution s = new Solution();
-    Assert.assertArrayEquals( res, s.sortSelection(arr));
-  }
-  @Test
-  public void testCase48() {
-    int[] arr = {468, 940, 198, 450, 524, 765, 197, 793, 754, 621, 341};
-    int[] res = {197, 198, 341, 450, 468, 524, 621, 754, 765, 793, 940};
-    Solution s = new Solution();
-    Assert.assertArrayEquals( res, s.sortSelection(arr));
-  }
-  @Test
-  public void testCase49() {
-    int[] arr = {73, 625, 864, 156, 521, 192, 794, 571, 295, 156, 809, 660, 110, 31, 721, 708, 404};
-    int[] res = {31, 73, 110, 156, 156, 192, 295, 404, 521, 571, 625, 660, 708, 721, 794, 809, 864};
-    Solution s = new Solution();
-    Assert.assertArrayEquals( res, s.sortSelection(arr));
-  }
-  @Test
-  public void testCase50() {
-    int[] arr = {646, 787, 35, 727, 812, 148, 550, 546, 6, 220, 420, 432, 480, 266, 626, 803, 38, 469, 635, 215, 453, 630};
-    int[] res = {6, 35, 38, 148, 215, 220, 266, 420, 432, 453, 469, 480, 546, 550, 626, 630, 635, 646, 727, 787, 803, 812};
-    Solution s = new Solution();
-    Assert.assertArrayEquals( res, s.sortSelection(arr));
-  }
-  @Test
-  public void testCase51() {
-    int[] arr = {848};
-    int[] res = {848};
-    Solution s = new Solution();
-    Assert.assertArrayEquals( res, s.sortSelection(arr));
-  }
-  @Test
-  public void testCase52() {
-    int[] arr = {22, 454, 857, 814, 542, 125, 190, 865, 926, 697, 365, 125, 718, 843, 82, 394, 953, 197, 734, 706, 462};
-    int[] res = {22, 82, 125, 125, 190, 197, 365, 394, 454, 462, 542, 697, 706, 718, 734, 814, 843, 857, 865, 926, 953};
-    Solution s = new Solution();
-    Assert.assertArrayEquals( res, s.sortSelection(arr));
-  }
-  @Test
-  public void testCase53() {
-    int[] arr = {220, 796, 976, 620, 306, 324, 412};
-    int[] res = {220, 306, 324, 412, 620, 796, 976};
-    Solution s = new Solution();
-    Assert.assertArrayEquals( res, s.sortSelection(arr));
-  }
-  @Test
-  public void testCase54() {
-    int[] arr = {26, 178, 878, 208, 517, 480, 15, 186, 627, 996, 582, 934, 783, 46, 51, 950, 692, 623, 818, 739, 727, 985, 826, 556, 64, 316, 192, 837};
-    int[] res = {15, 26, 46, 51, 64, 178, 186, 192, 208, 316, 480, 517, 556, 582, 623, 627, 692, 727, 739, 783, 818, 826, 837, 878, 934, 950, 985, 996};
-    Solution s = new Solution();
-    Assert.assertArrayEquals( res, s.sortSelection(arr));
-  }
-  @Test
-  public void testCase55() {
-    int[] arr = {385, 715, 349, 78, 2, 664, 204, 448, 469, 225, 49, 182, 920, 23, 349, 742, 34, 271, 818, 191, 188};
-    int[] res = {2, 23, 34, 49, 78, 182, 188, 191, 204, 225, 271, 349, 349, 385, 448, 469, 664, 715, 742, 818, 920};
-    Solution s = new Solution();
-    Assert.assertArrayEquals( res, s.sortSelection(arr));
-  }
-  @Test
-  public void testCase56() {
-    int[] arr = {512, 569};
-    int[] res = {512, 569};
-    Solution s = new Solution();
-    Assert.assertArrayEquals( res, s.sortSelection(arr));
-  }
-  @Test
-  public void testCase57() {
-    int[] arr = {297, 470, 722, 861, 972, 453, 134, 557, 486};
-    int[] res = {134, 297, 453, 470, 486, 557, 722, 861, 972};
-    Solution s = new Solution();
-    Assert.assertArrayEquals( res, s.sortSelection(arr));
-  }
-  @Test
-  public void testCase58() {
-    int[] arr = {113, 791, 229, 706, 993, 64, 331, 193, 488, 74, 218, 860, 846, 829, 341, 373, 565, 968, 335};
-    int[] res = {64, 74, 113, 193, 218, 229, 331, 335, 341, 373, 488, 565, 706, 791, 829, 846, 860, 968, 993};
-    Solution s = new Solution();
-    Assert.assertArrayEquals( res, s.sortSelection(arr));
-  }
-  @Test
-  public void testCase59() {
-    int[] arr = {995, 92, 384};
-    int[] res = {92, 384, 995};
-    Solution s = new Solution();
-    Assert.assertArrayEquals( res, s.sortSelection(arr));
-  }
-  @Test
-  public void testCase60() {
-    int[] arr = {873, 913, 472, 891, 376, 385, 822, 128, 593};
-    int[] res = {128, 376, 385, 472, 593, 822, 873, 891, 913};
-    Solution s = new Solution();
-    Assert.assertArrayEquals( res, s.sortSelection(arr));
-  }
-  @Test
-  public void testCase61() {
-    int[] arr = {839, 168, 758, 779, 479, 180, 964, 774};
-    int[] res = {168, 180, 479, 758, 774, 779, 839, 964};
-    Solution s = new Solution();
-    Assert.assertArrayEquals( res, s.sortSelection(arr));
-  }
-  @Test
-  public void testCase62() {
-    int[] arr = {81, 594, 838, 125, 799, 789, 434, 653, 371, 652};
-    int[] res = {81, 125, 371, 434, 594, 652, 653, 789, 799, 838};
-    Solution s = new Solution();
-    Assert.assertArrayEquals( res, s.sortSelection(arr));
-  }
-  @Test
-  public void testCase63() {
-    int[] arr = {346, 640, 885, 442, 571, 398, 928, 205, 829, 854, 128, 740, 223, 557, 288, 623};
-    int[] res = {128, 205, 223, 288, 346, 398, 442, 557, 571, 623, 640, 740, 829, 854, 885, 928};
-    Solution s = new Solution();
-    Assert.assertArrayEquals( res, s.sortSelection(arr));
-  }
-  @Test
-  public void testCase64() {
-    int[] arr = {608, 849, 11, 298, 125, 983, 600, 530, 212, 913, 342, 189, 851, 457, 961, 193, 447, 127, 593, 576, 647, 481, 850, 720, 916, 613, 317};
-    int[] res = {11, 125, 127, 189, 193, 212, 298, 317, 342, 447, 457, 481, 530, 576, 593, 600, 608, 613, 647, 720, 849, 850, 851, 913, 916, 961, 983};
-    Solution s = new Solution();
-    Assert.assertArrayEquals( res, s.sortSelection(arr));
-  }
-  @Test
-  public void testCase65() {
-    int[] arr = {284, 303, 585, 841, 147, 586, 793, 634};
-    int[] res = {147, 284, 303, 585, 586, 634, 793, 841};
-    Solution s = new Solution();
-    Assert.assertArrayEquals( res, s.sortSelection(arr));
-  }
-  @Test
-  public void testCase66() {
-    int[] arr = {479, 277, 749, 983, 434, 585, 519, 255, 655, 887, 625, 313, 594, 114, 166, 964, 677, 509, 672};
-    int[] res = {114, 166, 255, 277, 313, 434, 479, 509, 519, 585, 594, 625, 655, 672, 677, 749, 887, 964, 983};
-    Solution s = new Solution();
-    Assert.assertArrayEquals( res, s.sortSelection(arr));
-  }
-  @Test
-  public void testCase67() {
-    int[] arr = {499, 241, 1, 877, 346, 866, 681, 132, 192, 577, 340, 848, 76, 701, 382, 2, 296, 902, 231, 114, 85, 454, 797, 266, 611, 217};
-    int[] res = {1, 2, 76, 85, 114, 132, 192, 217, 231, 241, 266, 296, 340, 346, 382, 454, 499, 577, 611, 681, 701, 797, 848, 866, 877, 902};
-    Solution s = new Solution();
-    Assert.assertArrayEquals( res, s.sortSelection(arr));
-  }
-  @Test
-  public void testCase68() {
-    int[] arr = {699, 223, 7, 538, 30, 571, 950, 406, 996, 754, 214, 424, 451, 509, 69, 733, 436, 12, 395, 434, 949, 300, 34, 711, 739, 276, 22, 747, 460};
-    int[] res = {7, 12, 22, 30, 34, 69, 214, 223, 276, 300, 395, 406, 424, 434, 436, 451, 460, 509, 538, 571, 699, 711, 733, 739, 747, 754, 949, 950, 996};
-    Solution s = new Solution();
-    Assert.assertArrayEquals( res, s.sortSelection(arr));
-  }
-  @Test
-  public void testCase69() {
-    int[] arr = {427, 666, 885, 42, 771, 342, 276, 372, 595, 798, 469, 163, 422, 860, 452, 131, 299, 729};
-    int[] res = {42, 131, 163, 276, 299, 342, 372, 422, 427, 452, 469, 595, 666, 729, 771, 798, 860, 885};
-    Solution s = new Solution();
-    Assert.assertArrayEquals( res, s.sortSelection(arr));
-  }
-  @Test
-  public void testCase70() {
-    int[] arr = {821, 191, 408, 528, 379, 527, 371, 658, 819, 835, 657, 170, 146, 879, 24, 62, 702, 977};
-    int[] res = {24, 62, 146, 170, 191, 371, 379, 408, 527, 528, 657, 658, 702, 819, 821, 835, 879, 977};
-    Solution s = new Solution();
-    Assert.assertArrayEquals( res, s.sortSelection(arr));
-  }
-  @Test
-  public void testCase71() {
-    int[] arr = {279, 538, 865, 909, 410, 596, 595, 338, 871, 312, 545, 639, 295, 190, 428, 554, 832, 479, 802, 750, 594, 791, 189, 575, 321, 839, 802, 768};
-    int[] res = {189, 190, 279, 295, 312, 321, 338, 410, 428, 479, 538, 545, 554, 575, 594, 595, 596, 639, 750, 768, 791, 802, 802, 832, 839, 865, 871, 909};
-    Solution s = new Solution();
-    Assert.assertArrayEquals( res, s.sortSelection(arr));
-  }
-  @Test
-  public void testCase72() {
-    int[] arr = {384, 304, 385, 64, 102, 263, 638, 310, 791, 430};
-    int[] res = {64, 102, 263, 304, 310, 384, 385, 430, 638, 791};
-    Solution s = new Solution();
-    Assert.assertArrayEquals( res, s.sortSelection(arr));
-  }
-  @Test
-  public void testCase73() {
-    int[] arr = {426, 11, 302, 542, 634, 931, 886, 203, 350, 54, 381, 337};
-    int[] res = {11, 54, 203, 302, 337, 350, 381, 426, 542, 634, 886, 931};
-    Solution s = new Solution();
-    Assert.assertArrayEquals( res, s.sortSelection(arr));
-  }
-  @Test
-  public void testCase74() {
-    int[] arr = {768, 12, 918, 750, 521, 156};
-    int[] res = {12, 156, 521, 750, 768, 918};
-    Solution s = new Solution();
-    Assert.assertArrayEquals( res, s.sortSelection(arr));
-  }
-  @Test
-  public void testCase75() {
-    int[] arr = {618, 439, 419, 285, 771, 321, 961, 552, 651, 526, 778, 51, 586, 231, 973, 271, 602, 979, 724, 740, 274};
-    int[] res = {51, 231, 271, 274, 285, 321, 419, 439, 526, 552, 586, 602, 618, 651, 724, 740, 771, 778, 961, 973, 979};
-    Solution s = new Solution();
-    Assert.assertArrayEquals( res, s.sortSelection(arr));
-  }
-  @Test
-  public void testCase76() {
-    int[] arr = {365, 108, 53, 670, 136, 112, 792, 115, 61, 771, 123, 128, 337, 596, 432, 974, 855, 562, 941, 125, 957};
-    int[] res = {53, 61, 108, 112, 115, 123, 125, 128, 136, 337, 365, 432, 562, 596, 670, 771, 792, 855, 941, 957, 974};
-    Solution s = new Solution();
-    Assert.assertArrayEquals( res, s.sortSelection(arr));
-  }
-  @Test
-  public void testCase77() {
-    int[] arr = {50, 259, 962, 952, 180, 972, 245, 356, 806, 372, 211, 958, 949, 728, 38, 841, 553, 821, 270};
-    int[] res = {38, 50, 180, 211, 245, 259, 270, 356, 372, 553, 728, 806, 821, 841, 949, 952, 958, 962, 972};
-    Solution s = new Solution();
-    Assert.assertArrayEquals( res, s.sortSelection(arr));
-  }
-  @Test
-  public void testCase78() {
-    int[] arr = {369, 998, 66, 67, 289, 621, 626, 159, 198, 509};
-    int[] res = {66, 67, 159, 198, 289, 369, 509, 621, 626, 998};
-    Solution s = new Solution();
-    Assert.assertArrayEquals( res, s.sortSelection(arr));
-  }
-  @Test
-  public void testCase79() {
-    int[] arr = {672, 745, 257, 78, 528, 638, 406, 399, 557, 636, 168, 327, 891, 597, 886, 838, 134, 719, 593, 297, 271, 592, 40, 847, 580, 319};
-    int[] res = {40, 78, 134, 168, 257, 271, 297, 319, 327, 399, 406, 528, 557, 580, 592, 593, 597, 636, 638, 672, 719, 745, 838, 847, 886, 891};
-    Solution s = new Solution();
-    Assert.assertArrayEquals( res, s.sortSelection(arr));
-  }
-  @Test
-  public void testCase80() {
-    int[] arr = {912, 441, 105, 588, 284, 808};
-    int[] res = {105, 284, 441, 588, 808, 912};
-    Solution s = new Solution();
-    Assert.assertArrayEquals( res, s.sortSelection(arr));
-  }
+  // @Test
+  // public void testCase41() {
+  //   int[] arr = {772, 707, 712, 614, 966, 999, 70};
+  //   int[] res = {70, 614, 707, 712, 772, 966, 999};
+  //   Solution s = new Solution();
+  //   Assert.assertArrayEquals( res, s.sortSelection(arr));
+  // }
+  // @Test
+  // public void testCase42() {
+  //   int[] arr = {46, 82, 648, 786, 795, 516, 24, 364, 364, 752, 898, 809, 201, 615, 809, 884, 257, 22};
+  //   int[] res = {22, 24, 46, 82, 201, 257, 364, 364, 516, 615, 648, 752, 786, 795, 809, 809, 884, 898};
+  //   Solution s = new Solution();
+  //   Assert.assertArrayEquals( res, s.sortSelection(arr));
+  // }
+  // @Test
+  // public void testCase43() {
+  //   int[] arr = {287, 399, 591, 67, 740, 853, 407, 76, 658, 295, 282, 639, 106, 712, 343, 702, 544, 409, 992, 405, 916, 542, 163, 950, 242};
+  //   int[] res = {67, 76, 106, 163, 242, 282, 287, 295, 343, 399, 405, 407, 409, 542, 544, 591, 639, 658, 702, 712, 740, 853, 916, 950, 992};
+  //   Solution s = new Solution();
+  //   Assert.assertArrayEquals( res, s.sortSelection(arr));
+  // }
+  // @Test
+  // public void testCase44() {
+  //   int[] arr = {775, 927, 978, 665, 251, 536, 304, 201, 966, 944, 979, 766, 535, 70, 624, 652, 236, 822, 925, 734, 714, 770, 695, 323, 935, 865};
+  //   int[] res = {70, 201, 236, 251, 304, 323, 535, 536, 624, 652, 665, 695, 714, 734, 766, 770, 775, 822, 865, 925, 927, 935, 944, 966, 978, 979};
+  //   Solution s = new Solution();
+  //   Assert.assertArrayEquals( res, s.sortSelection(arr));
+  // }
+  // @Test
+  // public void testCase45() {
+  //   int[] arr = {769, 919, 643, 629, 677, 665, 503, 452, 917, 983, 116, 400, 853, 803, 676, 323, 715, 524, 410};
+  //   int[] res = {116, 323, 400, 410, 452, 503, 524, 629, 643, 665, 676, 677, 715, 769, 803, 853, 917, 919, 983};
+  //   Solution s = new Solution();
+  //   Assert.assertArrayEquals( res, s.sortSelection(arr));
+  // }
+  // @Test
+  // public void testCase46() {
+  //   int[] arr = {884, 513, 722, 172, 643, 16, 184, 405, 803, 699, 3, 545, 84, 159, 334};
+  //   int[] res = {3, 16, 84, 159, 172, 184, 334, 405, 513, 545, 643, 699, 722, 803, 884};
+  //   Solution s = new Solution();
+  //   Assert.assertArrayEquals( res, s.sortSelection(arr));
+  // }
+  // @Test
+  // public void testCase47() {
+  //   int[] arr = {448, 11, 285, 732, 753, 47, 709, 193, 616, 879, 31, 847, 948, 106, 126, 489, 142, 23, 213, 121, 197, 84, 329, 596};
+  //   int[] res = {11, 23, 31, 47, 84, 106, 121, 126, 142, 193, 197, 213, 285, 329, 448, 489, 596, 616, 709, 732, 753, 847, 879, 948};
+  //   Solution s = new Solution();
+  //   Assert.assertArrayEquals( res, s.sortSelection(arr));
+  // }
+  // @Test
+  // public void testCase48() {
+  //   int[] arr = {468, 940, 198, 450, 524, 765, 197, 793, 754, 621, 341};
+  //   int[] res = {197, 198, 341, 450, 468, 524, 621, 754, 765, 793, 940};
+  //   Solution s = new Solution();
+  //   Assert.assertArrayEquals( res, s.sortSelection(arr));
+  // }
+  // @Test
+  // public void testCase49() {
+  //   int[] arr = {73, 625, 864, 156, 521, 192, 794, 571, 295, 156, 809, 660, 110, 31, 721, 708, 404};
+  //   int[] res = {31, 73, 110, 156, 156, 192, 295, 404, 521, 571, 625, 660, 708, 721, 794, 809, 864};
+  //   Solution s = new Solution();
+  //   Assert.assertArrayEquals( res, s.sortSelection(arr));
+  // }
+  // @Test
+  // public void testCase50() {
+  //   int[] arr = {646, 787, 35, 727, 812, 148, 550, 546, 6, 220, 420, 432, 480, 266, 626, 803, 38, 469, 635, 215, 453, 630};
+  //   int[] res = {6, 35, 38, 148, 215, 220, 266, 420, 432, 453, 469, 480, 546, 550, 626, 630, 635, 646, 727, 787, 803, 812};
+  //   Solution s = new Solution();
+  //   Assert.assertArrayEquals( res, s.sortSelection(arr));
+  // }
+  // @Test
+  // public void testCase51() {
+  //   int[] arr = {848};
+  //   int[] res = {848};
+  //   Solution s = new Solution();
+  //   Assert.assertArrayEquals( res, s.sortSelection(arr));
+  // }
+  // @Test
+  // public void testCase52() {
+  //   int[] arr = {22, 454, 857, 814, 542, 125, 190, 865, 926, 697, 365, 125, 718, 843, 82, 394, 953, 197, 734, 706, 462};
+  //   int[] res = {22, 82, 125, 125, 190, 197, 365, 394, 454, 462, 542, 697, 706, 718, 734, 814, 843, 857, 865, 926, 953};
+  //   Solution s = new Solution();
+  //   Assert.assertArrayEquals( res, s.sortSelection(arr));
+  // }
+  // @Test
+  // public void testCase53() {
+  //   int[] arr = {220, 796, 976, 620, 306, 324, 412};
+  //   int[] res = {220, 306, 324, 412, 620, 796, 976};
+  //   Solution s = new Solution();
+  //   Assert.assertArrayEquals( res, s.sortSelection(arr));
+  // }
+  // @Test
+  // public void testCase54() {
+  //   int[] arr = {26, 178, 878, 208, 517, 480, 15, 186, 627, 996, 582, 934, 783, 46, 51, 950, 692, 623, 818, 739, 727, 985, 826, 556, 64, 316, 192, 837};
+  //   int[] res = {15, 26, 46, 51, 64, 178, 186, 192, 208, 316, 480, 517, 556, 582, 623, 627, 692, 727, 739, 783, 818, 826, 837, 878, 934, 950, 985, 996};
+  //   Solution s = new Solution();
+  //   Assert.assertArrayEquals( res, s.sortSelection(arr));
+  // }
+  // @Test
+  // public void testCase55() {
+  //   int[] arr = {385, 715, 349, 78, 2, 664, 204, 448, 469, 225, 49, 182, 920, 23, 349, 742, 34, 271, 818, 191, 188};
+  //   int[] res = {2, 23, 34, 49, 78, 182, 188, 191, 204, 225, 271, 349, 349, 385, 448, 469, 664, 715, 742, 818, 920};
+  //   Solution s = new Solution();
+  //   Assert.assertArrayEquals( res, s.sortSelection(arr));
+  // }
+  // @Test
+  // public void testCase56() {
+  //   int[] arr = {512, 569};
+  //   int[] res = {512, 569};
+  //   Solution s = new Solution();
+  //   Assert.assertArrayEquals( res, s.sortSelection(arr));
+  // }
+  // @Test
+  // public void testCase57() {
+  //   int[] arr = {297, 470, 722, 861, 972, 453, 134, 557, 486};
+  //   int[] res = {134, 297, 453, 470, 486, 557, 722, 861, 972};
+  //   Solution s = new Solution();
+  //   Assert.assertArrayEquals( res, s.sortSelection(arr));
+  // }
+  // @Test
+  // public void testCase58() {
+  //   int[] arr = {113, 791, 229, 706, 993, 64, 331, 193, 488, 74, 218, 860, 846, 829, 341, 373, 565, 968, 335};
+  //   int[] res = {64, 74, 113, 193, 218, 229, 331, 335, 341, 373, 488, 565, 706, 791, 829, 846, 860, 968, 993};
+  //   Solution s = new Solution();
+  //   Assert.assertArrayEquals( res, s.sortSelection(arr));
+  // }
+  // @Test
+  // public void testCase59() {
+  //   int[] arr = {995, 92, 384};
+  //   int[] res = {92, 384, 995};
+  //   Solution s = new Solution();
+  //   Assert.assertArrayEquals( res, s.sortSelection(arr));
+  // }
+  // @Test
+  // public void testCase60() {
+  //   int[] arr = {873, 913, 472, 891, 376, 385, 822, 128, 593};
+  //   int[] res = {128, 376, 385, 472, 593, 822, 873, 891, 913};
+  //   Solution s = new Solution();
+  //   Assert.assertArrayEquals( res, s.sortSelection(arr));
+  // }
+  // @Test
+  // public void testCase61() {
+  //   int[] arr = {839, 168, 758, 779, 479, 180, 964, 774};
+  //   int[] res = {168, 180, 479, 758, 774, 779, 839, 964};
+  //   Solution s = new Solution();
+  //   Assert.assertArrayEquals( res, s.sortSelection(arr));
+  // }
+  // @Test
+  // public void testCase62() {
+  //   int[] arr = {81, 594, 838, 125, 799, 789, 434, 653, 371, 652};
+  //   int[] res = {81, 125, 371, 434, 594, 652, 653, 789, 799, 838};
+  //   Solution s = new Solution();
+  //   Assert.assertArrayEquals( res, s.sortSelection(arr));
+  // }
+  // @Test
+  // public void testCase63() {
+  //   int[] arr = {346, 640, 885, 442, 571, 398, 928, 205, 829, 854, 128, 740, 223, 557, 288, 623};
+  //   int[] res = {128, 205, 223, 288, 346, 398, 442, 557, 571, 623, 640, 740, 829, 854, 885, 928};
+  //   Solution s = new Solution();
+  //   Assert.assertArrayEquals( res, s.sortSelection(arr));
+  // }
+  // @Test
+  // public void testCase64() {
+  //   int[] arr = {608, 849, 11, 298, 125, 983, 600, 530, 212, 913, 342, 189, 851, 457, 961, 193, 447, 127, 593, 576, 647, 481, 850, 720, 916, 613, 317};
+  //   int[] res = {11, 125, 127, 189, 193, 212, 298, 317, 342, 447, 457, 481, 530, 576, 593, 600, 608, 613, 647, 720, 849, 850, 851, 913, 916, 961, 983};
+  //   Solution s = new Solution();
+  //   Assert.assertArrayEquals( res, s.sortSelection(arr));
+  // }
+  // @Test
+  // public void testCase65() {
+  //   int[] arr = {284, 303, 585, 841, 147, 586, 793, 634};
+  //   int[] res = {147, 284, 303, 585, 586, 634, 793, 841};
+  //   Solution s = new Solution();
+  //   Assert.assertArrayEquals( res, s.sortSelection(arr));
+  // }
+  // @Test
+  // public void testCase66() {
+  //   int[] arr = {479, 277, 749, 983, 434, 585, 519, 255, 655, 887, 625, 313, 594, 114, 166, 964, 677, 509, 672};
+  //   int[] res = {114, 166, 255, 277, 313, 434, 479, 509, 519, 585, 594, 625, 655, 672, 677, 749, 887, 964, 983};
+  //   Solution s = new Solution();
+  //   Assert.assertArrayEquals( res, s.sortSelection(arr));
+  // }
+  // @Test
+  // public void testCase67() {
+  //   int[] arr = {499, 241, 1, 877, 346, 866, 681, 132, 192, 577, 340, 848, 76, 701, 382, 2, 296, 902, 231, 114, 85, 454, 797, 266, 611, 217};
+  //   int[] res = {1, 2, 76, 85, 114, 132, 192, 217, 231, 241, 266, 296, 340, 346, 382, 454, 499, 577, 611, 681, 701, 797, 848, 866, 877, 902};
+  //   Solution s = new Solution();
+  //   Assert.assertArrayEquals( res, s.sortSelection(arr));
+  // }
+  // @Test
+  // public void testCase68() {
+  //   int[] arr = {699, 223, 7, 538, 30, 571, 950, 406, 996, 754, 214, 424, 451, 509, 69, 733, 436, 12, 395, 434, 949, 300, 34, 711, 739, 276, 22, 747, 460};
+  //   int[] res = {7, 12, 22, 30, 34, 69, 214, 223, 276, 300, 395, 406, 424, 434, 436, 451, 460, 509, 538, 571, 699, 711, 733, 739, 747, 754, 949, 950, 996};
+  //   Solution s = new Solution();
+  //   Assert.assertArrayEquals( res, s.sortSelection(arr));
+  // }
+  // @Test
+  // public void testCase69() {
+  //   int[] arr = {427, 666, 885, 42, 771, 342, 276, 372, 595, 798, 469, 163, 422, 860, 452, 131, 299, 729};
+  //   int[] res = {42, 131, 163, 276, 299, 342, 372, 422, 427, 452, 469, 595, 666, 729, 771, 798, 860, 885};
+  //   Solution s = new Solution();
+  //   Assert.assertArrayEquals( res, s.sortSelection(arr));
+  // }
+  // @Test
+  // public void testCase70() {
+  //   int[] arr = {821, 191, 408, 528, 379, 527, 371, 658, 819, 835, 657, 170, 146, 879, 24, 62, 702, 977};
+  //   int[] res = {24, 62, 146, 170, 191, 371, 379, 408, 527, 528, 657, 658, 702, 819, 821, 835, 879, 977};
+  //   Solution s = new Solution();
+  //   Assert.assertArrayEquals( res, s.sortSelection(arr));
+  // }
+  // @Test
+  // public void testCase71() {
+  //   int[] arr = {279, 538, 865, 909, 410, 596, 595, 338, 871, 312, 545, 639, 295, 190, 428, 554, 832, 479, 802, 750, 594, 791, 189, 575, 321, 839, 802, 768};
+  //   int[] res = {189, 190, 279, 295, 312, 321, 338, 410, 428, 479, 538, 545, 554, 575, 594, 595, 596, 639, 750, 768, 791, 802, 802, 832, 839, 865, 871, 909};
+  //   Solution s = new Solution();
+  //   Assert.assertArrayEquals( res, s.sortSelection(arr));
+  // }
+  // @Test
+  // public void testCase72() {
+  //   int[] arr = {384, 304, 385, 64, 102, 263, 638, 310, 791, 430};
+  //   int[] res = {64, 102, 263, 304, 310, 384, 385, 430, 638, 791};
+  //   Solution s = new Solution();
+  //   Assert.assertArrayEquals( res, s.sortSelection(arr));
+  // }
+  // @Test
+  // public void testCase73() {
+  //   int[] arr = {426, 11, 302, 542, 634, 931, 886, 203, 350, 54, 381, 337};
+  //   int[] res = {11, 54, 203, 302, 337, 350, 381, 426, 542, 634, 886, 931};
+  //   Solution s = new Solution();
+  //   Assert.assertArrayEquals( res, s.sortSelection(arr));
+  // }
+  // @Test
+  // public void testCase74() {
+  //   int[] arr = {768, 12, 918, 750, 521, 156};
+  //   int[] res = {12, 156, 521, 750, 768, 918};
+  //   Solution s = new Solution();
+  //   Assert.assertArrayEquals( res, s.sortSelection(arr));
+  // }
+  // @Test
+  // public void testCase75() {
+  //   int[] arr = {618, 439, 419, 285, 771, 321, 961, 552, 651, 526, 778, 51, 586, 231, 973, 271, 602, 979, 724, 740, 274};
+  //   int[] res = {51, 231, 271, 274, 285, 321, 419, 439, 526, 552, 586, 602, 618, 651, 724, 740, 771, 778, 961, 973, 979};
+  //   Solution s = new Solution();
+  //   Assert.assertArrayEquals( res, s.sortSelection(arr));
+  // }
+  // @Test
+  // public void testCase76() {
+  //   int[] arr = {365, 108, 53, 670, 136, 112, 792, 115, 61, 771, 123, 128, 337, 596, 432, 974, 855, 562, 941, 125, 957};
+  //   int[] res = {53, 61, 108, 112, 115, 123, 125, 128, 136, 337, 365, 432, 562, 596, 670, 771, 792, 855, 941, 957, 974};
+  //   Solution s = new Solution();
+  //   Assert.assertArrayEquals( res, s.sortSelection(arr));
+  // }
+  // @Test
+  // public void testCase77() {
+  //   int[] arr = {50, 259, 962, 952, 180, 972, 245, 356, 806, 372, 211, 958, 949, 728, 38, 841, 553, 821, 270};
+  //   int[] res = {38, 50, 180, 211, 245, 259, 270, 356, 372, 553, 728, 806, 821, 841, 949, 952, 958, 962, 972};
+  //   Solution s = new Solution();
+  //   Assert.assertArrayEquals( res, s.sortSelection(arr));
+  // }
+  // @Test
+  // public void testCase78() {
+  //   int[] arr = {369, 998, 66, 67, 289, 621, 626, 159, 198, 509};
+  //   int[] res = {66, 67, 159, 198, 289, 369, 509, 621, 626, 998};
+  //   Solution s = new Solution();
+  //   Assert.assertArrayEquals( res, s.sortSelection(arr));
+  // }
+  // @Test
+  // public void testCase79() {
+  //   int[] arr = {672, 745, 257, 78, 528, 638, 406, 399, 557, 636, 168, 327, 891, 597, 886, 838, 134, 719, 593, 297, 271, 592, 40, 847, 580, 319};
+  //   int[] res = {40, 78, 134, 168, 257, 271, 297, 319, 327, 399, 406, 528, 557, 580, 592, 593, 597, 636, 638, 672, 719, 745, 838, 847, 886, 891};
+  //   Solution s = new Solution();
+  //   Assert.assertArrayEquals( res, s.sortSelection(arr));
+  // }
+  // @Test
+  // public void testCase80() {
+  //   int[] arr = {912, 441, 105, 588, 284, 808};
+  //   int[] res = {105, 284, 441, 588, 808, 912};
+  //   Solution s = new Solution();
+  //   Assert.assertArrayEquals( res, s.sortSelection(arr));
+  // }
 
 
 }
