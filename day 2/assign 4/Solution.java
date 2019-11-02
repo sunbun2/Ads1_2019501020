@@ -1,4 +1,5 @@
-import java.util.*;
+import java.util.Queue;
+import java.util.LinkedList;
 class Solution{
 	public static String Josephus(int a, int b){
 	String s = "";
@@ -15,7 +16,7 @@ class Solution{
 	    }
 	    s = s + queue.remove() + " ";
 	}
-	s = s+queue.remove();
+	s = s + queue.remove();
 	// System.out.println(s);
 	return s;
 	}
