@@ -4,10 +4,10 @@ class ListCombine {
     int[] arr1;
     int[] arr2;
     int[] arr3;
-    private int i;
-    private int j;
-    private int k;
-    public ListCombine(final int[] arr1,final int[] arr2) {
+    private int i;/** Varibale for iteration */ 
+    private int j; /** Varibale for iteration */
+    private int k;/** Varibale for iteration */
+    public ListCombine(final int[] arr1 , final int[] arr2) {
         this.arr1 = arr1;
         this.arr2 = arr2;
         this.x = arr1.length + arr2.length;
@@ -42,7 +42,6 @@ class ListCombine {
             k += 1;
             i += 1;
         }
-
         return arr3;
     }
 
