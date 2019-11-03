@@ -1,7 +1,7 @@
 /**
  * List of my linkedlists.
  * 
- * @author     srujan
+ * @author     Abhiram Rayala
  */
 class Stack<T> {
     /**
