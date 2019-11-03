@@ -68,7 +68,8 @@ class Team implements Comparable<Team> {
 				else return -1;
 			} else {
 				if (noOfDraws > team.noOfDraws) return -1;
-				else return 1;
+				else if (noOfDraws > team.noOfDraws) return 1;
+				else return 0;
 			}
 		}
 	}

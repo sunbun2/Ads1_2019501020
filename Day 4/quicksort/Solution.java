@@ -16,6 +16,7 @@ class Solution {
 	 * @return     returns the sorted array
 	 */
 	public static int[] quickSort(final int[] arr) {
+		Collections.shuffle(Arrays.asList(arr));
 		recursivepartition(arr, 0, arr.length - 1);
 		return arr;
 	}

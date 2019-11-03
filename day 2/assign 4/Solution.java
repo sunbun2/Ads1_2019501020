@@ -1,9 +1,9 @@
 import java.util.Queue;
 import java.util.LinkedList;
 class Solution{
-	public static String Josephus(int a, int b){
+	public static String Josephus(final int a, final int b){
 	String s = "";
-	Queue<Integer> queue = new LinkedList<>();
+	Queue<Integer> queue = new Queue();
 	for (int t = 0; t < a; t++) {
 	    queue.add(t);
 	}

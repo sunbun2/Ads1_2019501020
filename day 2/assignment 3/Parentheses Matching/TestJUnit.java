@@ -14,7 +14,7 @@ import org.junit.Assert;
 import static org.junit.Assert.assertEquals;
 
 public class TestJUnit {
-	@Test
+@Test
 public void testCase1() {
   String str = "[()][{}()][](){}([{}(())([[{}]])][])[]([][])(){}{{}{[](){}}}()[]({})[{}{{}([{}][])}]";
   String res = "YES";
