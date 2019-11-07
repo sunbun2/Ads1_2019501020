@@ -1,6 +1,6 @@
 public class BinarySearchST<Key extends Comparable<Key>, Value> {
-    Keys[] keys;
-    Value[] value;
+    int[] keys;
+    String[] value;
     int point;
     BinarySearchST(){
         keys = new Keys[1000];
