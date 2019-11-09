@@ -10,4 +10,10 @@ class Book implements Comparable<Book>{
 	public int compareTo(Book that){
 		return this.title.compareTo(that.title);
 	}
+	public String toString() {
+		String result = "";
+		result = result + "Title: " + this.title + " Author: " + this.author
+				 + " Price: " + this.price;
+		return result;
+	}
 }
