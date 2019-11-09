@@ -1,116 +1,287 @@
-import java.util.*;
+import java.util.Arrays;
 
-public class BinarySearchST<Key extends Comparable<Key>, Value> {
+/**.
+ * This class describes a binary search st.
+ *
+ * @param      <Key>    The key
+ * @param      <Value>  The value
+ */
+public class BinarySearchST<Key extends Comparable<Key>,
+    Value extends Comparable<Value>> {
+    /**.
+     * Stores the keys
+     */
     private Key[] keys;
-    private Value[] vals;
-    private int n = 0;
 
-    public BinarySearchST() { 
-        keys = (Key[]) new Comparable[1000]; 
-        vals = (Value[]) new Object[1000]; 
-    }   
+    /**.
+     * Stores the values
+     */
+    private Value[] values;
 
-    public int  rank(Key k) {
-        int lo = 0, hi = n-1; 
-        while (lo <= hi) { 
-            int mid = lo + (hi - lo) / 2; 
-            int cmp = k.compareTo(keys[mid]);
-            if      (cmp < 0) hi = mid - 1; 
-            else if (cmp > 0) lo = mid + 1; 
-            else return mid; 
-        } 
-        return lo;                                                                                                                                                                                                                                                                                                                        
+    /**.
+     * Keeps track of the size of the array
+     */
+    private int counter;
+
+    /**.
+     * Constructs a new instance.
+     */
+    BinarySearchST() {
+        this.keys = (Key[]) new Comparable[2];
+        this.values = (Value[]) new Comparable[2];
+        this.counter = 0;
     }
-    public void put(Key k, Value v) {
-        if (v == null) {
-            delete(k);
+
+    /**.
+     * Constructs a new instance.
+     *
+     * @param      capacity  The capacity
+     */
+    BinarySearchST(final int capacity) {
+        this.keys = (Key[]) new Comparable[capacity];
+        this.values = (Value[]) new Comparable[capacity];
+        this.counter = 0;
+    }
+
+    /**.
+     * This method adds the element to the
+     * symbol table
+     *
+     * @param      key    The key
+     * @param      value  The value
+     */
+    public void put(final Key key, final Value value) {
+        if (key == null) {
+            return;
+        }
+        int index = rank(key);
+
+        // If the array is empty
+        if (counter == 0) {
+            keys[counter] = key;
+            values[counter] = value;
+            counter++;
             return;
         }
 
-        int i = rank(k);
-
-        // key is already in table
-        if (i < n && keys[i].compareTo(k) == 0) {
-            vals[i] = v;
+        // Check if the element is already present
+        if (index < counter && keys[index].compareTo(key) == 0) {
+            values[index] = value;
             return;
         }
 
-
-        for (int j = n; j > i; j--)  {
-            keys[j] = keys[j-1];
-            vals[j] = vals[j-1];
+        // Check to see of the array is full
+        if (counter == keys.length) {
+            resize();
         }
-        keys[i] = k;
-        vals[i] = v;
-        n++;
+
+        // Shifting the elements to the right
+        // by one place to make a hole
+        for (int i = counter; i > index; i--) {
+            keys[i] = keys[i - 1];
+            values[i] = values[i - 1];
+        }
+        keys[index] = key;
+        values[index] = value;
+        counter++;
     }
 
-    public Value get(Key k) {
-        int i = rank(k);
-        if (i < n && k.compareTo(keys[i]) == 0) return vals[i];
-        else return null;
-    }
-
-    boolean contains(Key k) {
-        return get(k) != null;
-    }
-
-    Key max() {
-        return keys[n-1];
-    }
-
-    Key floor(Key k) {
-        int i = rank(k);
-        if (i < n && k.compareTo(keys[i]) == 0) return keys[i];
-        if (i == 0) return null;
-        else return keys[i-1];
-    }
-
-    public void delete(Key key) {
-        if (n == 0) return;
-
-        // compute rank
-        int i = rank(key);
-
-        // key not in table
-        if (i == n || keys[i].compareTo(key) != 0) {
+    /**.
+     * Deletes the given key.
+     *
+     * @param      key   The key
+     */
+    public void delete(final Key key) {
+        if (key == null) {
+            return;
+        }
+        if (counter == 0) {
             return;
         }
 
-        for (int j = i; j < n-1; j++)  {
-            keys[j] = keys[j+1];
-            vals[j] = vals[j+1];
+        // Compute the rank to get the index
+        int index = rank(key);
+
+        // Check to see if element is not present
+        if (keys[index].compareTo(key) != 0) {
+            System.out.println("Key is not present in the data");
+            return;
         }
 
-        n--;
-        keys[n] = null;  // to avoid loitering
-        vals[n] = null;
+        // Shifting the elements to the left by one
+        // to replace the element at that index
+        for (int i = index; i < counter - 1; i++) {
+            keys[i] = keys[i + 1];
+            values[i] = values[i + 1];
+        }
+        counter--;
 
-    } 
 
+    }
+
+    /**.
+     * Deletes the minimum element of the array
+     */
     public void deleteMin() {
-        delete(min());
+        if (counter == 0) {
+            return;
+        }
+        delete(keys[0]);
     }
 
-    Key min() {
-        return keys[0];
+    /**.
+    * This method checks if the
+    * key is present in the key array
+    * or not
+    *
+    * @param      key   The key
+    *
+    * @return     { True: if present False otherwise }
+    */
+    public boolean contains(final Key key) {
+        if (counter == 0) {
+            return false;
+        }
+        int index = rank(key);
+        if (index < counter && keys[index].compareTo(key) == 0) {
+            return true;
+        }
+        return false;
     }
 
-    public Key[] keys() {
-        if (isEmpty()) {
+    /**.
+     * Gets the specified key.
+     *
+     * @param      key   The key
+     *
+     * @return     { returns the value of the  }
+     */
+    public Value get(final Key key) {
+        if (counter == 0) {
             return null;
         }
-        return keys;
-    }
-    public boolean isEmpty() {
-        return n == 0;
+        int index = rank(key);
+        if (index < counter && keys[index].compareTo(key) == 0) {
+            return values[index];
+        }
+        return null;
     }
 
-    public String toString() {
-        String str = "";
-        for (int i = 0; i < n; i++) {
-            str += keys[i] + " ";
+    /**.
+     * This method returns the max key
+     *
+     * @return     { returns the max key }
+     */
+    public Key max() {
+        if (counter == 0) {
+            return null;
         }
-        return str;
+        return keys[counter - 1];
     }
+
+    /**.
+     * Largest key that is present which is
+     * less than the key in the argument
+     *
+     * @param      key   The key
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public Key floor(final Key key) {
+        if (counter == 0) {
+            return null;
+        }
+        int index = rank(key);
+        if (index < counter && keys[index].compareTo(key) == 0) {
+            return keys[index];
+        }
+        return keys[index - 1];
+    }
+
+    /**.
+     * This method returns all the keys
+     *
+     * @return     { returns the keys in a sorted order }
+     */
+    public Iterable<Key> keys() {
+        Queue<Key> queue = new Queue<Key>();
+        for (int i = 0; i < counter; i++) {
+            queue.enqueue(keys[i]);
+        }
+        return queue;
+    }
+
+    /**.
+     * This method returns the number of
+     * keys in the symbol table tha
+     *
+     * @param      key   The key
+     *
+     * @return     { returns the rank of the key }
+     */
+    public int rank(final Key key) {
+        int low = 0;
+        int high = counter - 1;
+
+        while (low <= high) {
+            int mid = low + (high - low) / 2;
+            if (key.compareTo(keys[mid]) < 0) {
+                high = mid - 1;
+            } else if (key.compareTo(keys[mid]) > 0) {
+                low = mid + 1;
+            } else {
+                return mid;
+            }
+        }
+        return low;
+    }
+
+    /**.
+     * This method gives us the size
+     * of the data
+     *
+     * @return     { total size of the data }
+     */
+    public int size() {
+        return counter;
+    }
+
+    /**
+     * This method prints out the data.
+     */
+    public void displayData() {
+        for (int i = 0; i < counter; i++) {
+            System.out.println("Key: " + keys[i] + " Value: " + values[i]);
+        }
+    }
+
+    /**.
+     * This method doubles the size
+     * of the arrays
+     */
+    private void resize() {
+        Key[] tempKeys = Arrays.copyOf(
+                             this.keys, this.keys.length * 2);
+        Value[] tempValues = Arrays.copyOf(
+                                 this.values, this.values.length * 2);
+        this.keys = tempKeys;
+        this.values = tempValues;
+    }
+
+    // public static void main(String[] args) {
+    //  BinarySearchST<String, Integer> symbolTable =
+//        new BinarySearchST<String, Integer>();
+    //  symbolTable.put("S", 0);
+    //  symbolTable.put("O", 1);
+    //  symbolTable.put("R", 2);
+    //  // symbolTable.put("T", 3);
+    //  // symbolTable.put("E", 4);
+    //  // symbolTable.put("X", 5);
+    //  // symbolTable.put("A", 6);
+    //  // symbolTable.put("M", 7);
+    //  // symbolTable.put("P", 8);
+    //  // symbolTable.put("L", 9);
+    //  // symbolTable.put("E", 10);
+    //  System.out.println(symbolTable.max());
+    // }
 }

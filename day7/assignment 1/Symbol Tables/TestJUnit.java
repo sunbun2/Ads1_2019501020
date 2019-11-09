@@ -1,11 +1,11 @@
 /**
  * This is JUnit that tests the lower method in StringHandling class.
  * This contains 79 testcases.
- *
+ * 
  * Please don"t run this file.
- * You can add your own test cases to this file by just copy and
+ * You can add your own test cases to this file by just copy and 
  * paste the last three lines of the code (TestCase6).
- *
+ * 
  * @author Deepak Kumar
  */
 
@@ -35,15 +35,15 @@ public void testCase1() {
   Assert.assertEquals("X", symbolTable.max());
   Assert.assertEquals("R", symbolTable.floor("R"));
   Assert.assertEquals(1, symbolTable.rank("B"));
-
   symbolTable.deleteMin();
   Assert.assertEquals(true, symbolTable.contains("C"));
-  List<String> arr = new ArrayList<String>(Arrays.asList("C","E","H","L","M","P","R","S","X"));
+  // String[] arr = {"C","E","H","L","M","P","R","S","X"};
+  List<String> arr = Arrays.asList("C","E","H","L","M","P","R","S","X");
   String res = "";
   for(String s: arr){
   	res += s + " ";
   }
-  Assert.assertEquals(res, symbolTable.toString());
+  Assert.assertEquals(res, symbolTable.keys().toString());
 }
 
 @Test
@@ -66,12 +66,12 @@ public void testCase2() {
   symbolTable.deleteMin();
   symbolTable.deleteMin();
   Assert.assertEquals("Y", symbolTable.max());
-  List<String> arr = new ArrayList<String>(Arrays.asList("O","Q","S","T","U","Y"));
+  List<String> arr = Arrays.asList("O","Q","S","T","U","Y");
   String res = "";
   for(String s: arr){
   	res += s + " ";
   }
-  Assert.assertEquals(res, symbolTable.toString());
+  Assert.assertEquals(res, symbolTable.keys().toString());
   Assert.assertEquals("Y", symbolTable.floor("Z"));
   Assert.assertEquals("Y", symbolTable.floor("Y"));
   Assert.assertEquals("O", symbolTable.floor("P"));
@@ -94,12 +94,12 @@ public void testCase3() {
   symbolTable.put("E",10);
   Assert.assertEquals("X", symbolTable.max());
   symbolTable.deleteMin();
-  List<String> arr = new ArrayList<String>(Arrays.asList("E","L","M","O","P","R", "S", "T", "X"));
+  List<String> arr = Arrays.asList("E","L","M","O","P","R", "S", "T", "X");
   String res = "";
   for(String s: arr){
   	res += s + " ";
   }
-  Assert.assertEquals(res, symbolTable.toString());
+  Assert.assertEquals(res, symbolTable.keys().toString());
   Assert.assertEquals(0, symbolTable.rank("A"));
   Assert.assertEquals(0, symbolTable.rank("B"));
   Assert.assertEquals(0, symbolTable.rank("C"));
