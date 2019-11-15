@@ -1,3 +1,4 @@
+import java.util.NoSuchElementException;
 
 public class Queue<Item> {
     private Node tail;
@@ -31,7 +32,7 @@ public class Queue<Item> {
         }
 
         public Item dequeue() {
-            if (size == 0) return null;
+            if (size == 0) return new NoSuchElementException();
             if (size == 1) {
                 Item i = tail.element;
                 tail = null;
