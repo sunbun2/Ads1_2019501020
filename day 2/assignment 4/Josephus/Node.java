@@ -1,7 +1,7 @@
 /**
  * Class for node.
  * 
- * @author     Srujan
+ * @author     Abhiram Rayala
  */
 class Node {
 	private String value;
