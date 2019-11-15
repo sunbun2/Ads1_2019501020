@@ -1,12 +1,18 @@
 import java.util.Random;
-//implements Iterable<Item>
-public class RandomizedQueue<Item>  {
+import java.util.Iterator;
+import java.util.Arrays;
+public class RandomizedQueue<Item> implements Iterable<Item>  {
     Item[] arr;
     int size;
     public RandomizedQueue() {
         arr = (Item[]) new Object[1000];
-        size=0;
-    }  
+        size = 0;
+    }
+
+    private void resize() {
+        Item[] tempKeys = Arrays.copyOf(this.arr, this.arr.length * 2);
+        this.arr = tempKeys;
+    }
 
     public boolean isEmpty() {
         return size==0;
@@ -21,6 +27,7 @@ public class RandomizedQueue<Item>  {
     public void enqueue(Item item) {
         if (item==null) throw new IllegalArgumentException();
         arr[size++] = item;
+        if (size>=arr.length/2) { resize(); }
     }
 
     // remove and return a random item
@@ -32,6 +39,7 @@ public class RandomizedQueue<Item>  {
         for (int j=a;j<size;j++) {
             arr[j+1] = arr[j];
         }
+        //resize();
         return b;
     }
 
@@ -42,12 +50,21 @@ public class RandomizedQueue<Item>  {
         int a = rand.nextInt(size);
         return arr[a];  
     }
-
+    public Iterator<Item> iterator() {
+        return new RandomIterator();
+    }
     // return an independent iterator over items in random order
-    // public Iterator<Item> iterator() {
-    //     return arr;
-    // }
-
+    private class RandomIterator implements Iterator<Item> {
+        private int i;
+        public boolean hasNext()  { return i < size; }
+        public void remove()      { throw new UnsupportedOperationException();  }
+        public Item next() {
+            if (!hasNext()) return null;
+            Item element = arr[i];
+            i++;
+            return element;
+        }
+    }
     // unit testing (required)
     public static void main(String[] args) {
         RandomizedQueue<String> a = new RandomizedQueue();

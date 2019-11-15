@@ -95,7 +95,7 @@ public class Deque<Item> implements Iterable<Item> {
         public Item next() {
             if (!hasNext()) throw new NoSuchElementException();
             Item item = current.element;
-            current = current.next; 
+            current = current.next;
             return item;
         }
     }
