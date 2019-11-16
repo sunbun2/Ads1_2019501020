@@ -5,8 +5,8 @@ class card {
     public String value;
     public String type;
     card(String v,String t) {
-        this.value=v;
-        this.type=t;
+        this.value = v;
+        this.type = t;
     }
     card (card v) {
         this.value=v.value;
