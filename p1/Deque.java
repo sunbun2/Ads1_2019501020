@@ -40,7 +40,6 @@ public class Deque<Item> implements Iterable<Item> {
         head = tmp;
         if(tail == null) { tail = tmp;}
         size++;
-        System.out.println("adding: "+element);
     }
      
     /**
@@ -54,17 +53,19 @@ public class Deque<Item> implements Iterable<Item> {
         tail = tmp;
         if(head == null) { head = tmp;}
         size++;
-        System.out.println("adding: "+element);
     }
 
     public Item removeFirst() {
         if (size == 0) throw new NoSuchElementException();
-        Node tmp = head;
+        Node tm = head;
+        if (size==1) {
+            tail=null;
+            head=null;
+            return tm.element;
+        }
         head = head.next;
-        //head.prev = null;
         size--;
-        System.out.println("deleted: "+tmp.element);
-        return tmp.element;
+        return tm.element;
     }
      
     /**
@@ -74,10 +75,13 @@ public class Deque<Item> implements Iterable<Item> {
     public Item removeLast() {
         if (size == 0) throw new NoSuchElementException();
         Node tmp = tail;
+        if (size==1) {
+            tail=null;
+            head=null;
+            return tmp.element;
+        }
         tail = tail.prev;
-        //tail.next = null;
         size--;
-        System.out.println("deleted: "+tmp.element);
         return tmp.element;
     }
 
@@ -101,14 +105,13 @@ public class Deque<Item> implements Iterable<Item> {
     }
 
     public static void main(String[] args) {
-        Deque<String> b = new Deque();
-        b.addFirst("hii");
-        b.addLast("hello");
-        b.removeLast();
-        System.out.println(b.isEmpty());
-        System.out.println(b.size());
-        b.removeFirst();
-        //System.out.println( b.removeLast());
+        Deque<Integer> deque = new Deque<Integer>();
+        deque.isEmpty();        
+        deque.addFirst(2);
+        deque.removeLast();
+        deque.addLast(4);
+        System.out.println(deque.removeFirst());
     }
 
 }
+

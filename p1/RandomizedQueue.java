@@ -1,11 +1,13 @@
-import java.util.Random;
+import edu.princeton.cs.algs4.StdOut;
+import edu.princeton.cs.algs4.StdRandom;
+import java.util.NoSuchElementException;
 import java.util.Iterator;
 import java.util.Arrays;
 public class RandomizedQueue<Item> implements Iterable<Item>  {
-    Item[] arr;
-    int size;
+    private Item[] arr;
+    private int size;
     public RandomizedQueue() {
-        arr = (Item[]) new Object[1000];
+        arr = (Item[]) new Object[150];
         size = 0;
     }
 
@@ -33,22 +35,21 @@ public class RandomizedQueue<Item> implements Iterable<Item>  {
     // remove and return a random item
     public Item dequeue() {
         if (size==0) throw new java.util.NoSuchElementException(); 
-        Random rand = new Random();
-        int a = rand.nextInt(size);
+        int a = StdRandom.uniform(size);
         Item b = arr[a];  
         for (int j=a;j<size;j++) {
-            arr[j+1] = arr[j];
+            arr[j] = arr[j+1];
         }
-        //resize();
+        arr[size]=null;
+        size--;
         return b;
     }
 
     // return a random item (but do not remove it)
     public Item sample() {
         if (size==0) throw new java.util.NoSuchElementException(); 
-        Random rand = new Random();
-        int a = rand.nextInt(size);
-        return arr[a];  
+        int u = StdRandom.uniform(size);
+        return arr[u];  
     }
     public Iterator<Item> iterator() {
         return new RandomIterator();
@@ -59,7 +60,7 @@ public class RandomizedQueue<Item> implements Iterable<Item>  {
         public boolean hasNext()  { return i < size; }
         public void remove()      { throw new UnsupportedOperationException();  }
         public Item next() {
-            if (!hasNext()) return null;
+            if (!hasNext()) throw new NoSuchElementException();
             Item element = arr[i];
             i++;
             return element;
@@ -67,12 +68,18 @@ public class RandomizedQueue<Item> implements Iterable<Item>  {
     }
     // unit testing (required)
     public static void main(String[] args) {
-        RandomizedQueue<String> a = new RandomizedQueue();
-        a.enqueue("hii");
-        a.enqueue("hello");
-        System.out.println(a.size());
-        System.out.println(a.isEmpty());
-        System.out.println(a.sample());
+        RandomizedQueue<Integer> a = new RandomizedQueue();
+        a.enqueue(896);
+        a.enqueue(564);
+        a.enqueue(326);
+        a.dequeue();
+        a.enqueue(751);
+        a.isEmpty();
         System.out.println(a.dequeue());
+        
+        // System.out.println(a.size());
+        // System.out.println(a.isEmpty());
+        // System.out.println(a.sample());
+        // System.out.println(a.dequeue());
     }
 }
