@@ -8,7 +8,7 @@ public class Deque<Item> implements Iterable<Item> {
     private Node head;
     private Node tail;
     private int size;
-     
+    
     public Deque() {
         size = 0;
     }
@@ -61,6 +61,7 @@ public class Deque<Item> implements Iterable<Item> {
         if (size==1) {
             tail=null;
             head=null;
+            size--;
             return tm.element;
         }
         head = head.next;
@@ -78,6 +79,7 @@ public class Deque<Item> implements Iterable<Item> {
         if (size==1) {
             tail=null;
             head=null;
+            size--;
             return tmp.element;
         }
         tail = tail.prev;
@@ -106,11 +108,9 @@ public class Deque<Item> implements Iterable<Item> {
 
     public static void main(String[] args) {
         Deque<Integer> deque = new Deque<Integer>();
-        deque.isEmpty();        
-        deque.addFirst(2);
-        deque.removeLast();
-        deque.addLast(4);
-        System.out.println(deque.removeFirst());
+        deque.addFirst(1);
+        deque.removeFirst();
+        System.out.println(deque.isEmpty());
     }
 
 }

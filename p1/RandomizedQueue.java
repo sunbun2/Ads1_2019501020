@@ -68,13 +68,13 @@ public class RandomizedQueue<Item> implements Iterable<Item>  {
     }
     // unit testing (required)
     public static void main(String[] args) {
-        RandomizedQueue<Integer> a = new RandomizedQueue();
+        RandomizedQueue<Integer> a = new RandomizedQueue<Integer>();
         a.enqueue(896);
         a.enqueue(564);
         a.enqueue(326);
         a.dequeue();
         a.enqueue(751);
-        a.isEmpty();
+        //a.isEmpty();
         System.out.println(a.dequeue());
         
         // System.out.println(a.size());
