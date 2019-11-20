@@ -3,6 +3,7 @@ import edu.princeton.cs.algs4.StdRandom;
 import java.util.NoSuchElementException;
 import java.util.Iterator;
 import java.util.Arrays;
+
 public class RandomizedQueue<Item> implements Iterable<Item>  {
     private Item[] arr;
     private int size;
@@ -37,7 +38,7 @@ public class RandomizedQueue<Item> implements Iterable<Item>  {
         if (size==0) throw new java.util.NoSuchElementException(); 
         int a = StdRandom.uniform(size);
         Item b = arr[a];  
-        for (int j=a;j<size;j++) {
+        for (int j = a; j < size; j++) {
             arr[j] = arr[j+1];
         }
         arr[size]=null;
