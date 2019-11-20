@@ -113,7 +113,7 @@ public class BST<Key extends Comparable<Key>, Value> {
         a.put(4,3);
         a.put(1,7);
         a.put(5, 10);
-        System.out.println(a.isOrdered(1, 7, 1, 5));
+        System.out.println(a.isOrdered(4, 3, 1, 5));
     }
 }
 
