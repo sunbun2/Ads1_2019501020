@@ -223,14 +223,13 @@ public class LinearProbingHashST<Key, Value> {
         }
         int c1 =0;
         int c2 =0;
-        for(int x = 0; x<500000; x++){
+        for(int x = 0; x<1000000; x++){
             if (x % 100==0) {
                 c1++;
                 if (l.mytest(x)) {
                     c2++;
-                    //System.out.println("hii");
                 }
-            }
+            }   
         }
         System.out.println(c2);
         System.out.println(c1);
